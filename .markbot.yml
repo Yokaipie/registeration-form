@@ -1,0 +1,66 @@
+repo: 'registration-form'
+canvasCourse: 'web-dev-2'
+
+inherit:
+  - naming-restrict-live
+  - git-2
+  - html
+  - css
+  - google-fonts
+  - gridifier
+  - modulifier
+  - modulifier-buttons
+  - typografier
+  - css-order-modules-grid-type-main
+  - forms
+
+html:
+  - path: 'index.html'
+    has:
+      - ['form[method="POST"][action*="formspree.io"]', 'The `<form>` should submit to @@https://formspree.io/@@']
+      - 'fieldset'
+      - 'legend'
+      - 'label[for]'
+      - 'input[id][name]'
+      - 'button[type="submit"]'
+      - 'select[id][name]'
+      - 'select > option'
+      - ['select > option:nth-child(4)', 'There should be 4 `<option>` tags']
+      - 'textarea[id][name]'
+      - 'input[type="hidden"]'
+      - '.grid > .unit'
+    has_not:
+      - 'hr'
+    search:
+      - 'Want to go to Mars?'
+      - 'We’re looking for super-awesome human beings who want to make the long trek to Mars for the adventure of a lifetime.'
+      - 'Personal details'
+      - 'Name'
+      - 'Age'
+      - 'Email'
+      - 'Physical fitness'
+      - 'Super-human'
+      - 'Fit as a fiddle'
+      - 'Not terribly strong'
+      - 'A little couch-potato-y'
+      - 'Address'
+      - 'Mission statement'
+      - 'Why do you want to go to Mars?'
+      - 'Register for the trip!'
+      - 'Request to join the mission'
+
+css:
+  - path: 'css/main.css'
+    has:
+      - ['html', 'font-family', '"Open Sans", sans-serif']
+      - ['@60']
+    search:
+      - '#000'
+      - '#fff'
+      - '#f2f2f2'
+      - 'padding'
+      - 'border'
+
+screenshots:
+  - path: 'index.html'
+    sizes: [320, 400, 608, 960, 1440]
